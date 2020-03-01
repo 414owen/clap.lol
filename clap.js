@@ -66,7 +66,7 @@
     };
   };
 
-  const debouncedUpdateClap = debounce(800, updateClap);
+  const debouncedUpdateClap = debounce(500, updateClap);
 
   const loader = document.getElementById("loader");
 
@@ -85,6 +85,7 @@
   });
 
   input.addEventListener("keyup", debouncedUpdateClap);
+  input.focus();
 
   const copy = document.getElementById("copy");
 
